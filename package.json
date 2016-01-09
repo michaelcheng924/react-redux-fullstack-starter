@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_PATH=$NODE_PATH:./shared node .",
+    "dev": "npm run start & webpack-dev-server --progress --color",
     "build": "NODE_ENV=production webpack --progress --color -p --config webpack.prod.config.js"
   },
   "repository": {
@@ -26,6 +27,8 @@
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
-    "webpack": "^1.12.10"
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.12.10",
+    "webpack-dev-server": "^1.14.0"
   }
 }
