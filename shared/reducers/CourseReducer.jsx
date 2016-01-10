@@ -1,4 +1,4 @@
-import { Map, List } from 'immutable';
+import { Map, List, fromJS } from 'immutable';
 
 const defaultState = Map({
     steps: List()
@@ -6,6 +6,8 @@ const defaultState = Map({
 
 export default function courseReducer(state = defaultState, action) {
     switch(action.type) {
+        case 'SET_STEPS':
+            return state.set('steps', fromJS(action.steps));
         default:
             return state;
     }

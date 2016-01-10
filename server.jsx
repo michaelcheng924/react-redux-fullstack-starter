@@ -7,6 +7,48 @@ import createLocation from 'history/lib/createLocation';
 import routes from 'routes';
 import { makeStore } from 'helpers';
 import { Provider } from 'react-redux';
+import { setSteps } from 'actions/CourseActions';
+
+const steps = [
+    {
+        id: '1',
+        name: 'ACT Basics',
+        isExpanded: true,
+        isCompleted: false,
+        modules: [
+        {
+            id: '1-1',
+            name: 'Overview / Format',
+            url: '1-1-overview-format',
+            isCompleted: true
+        }, {
+            id: '1-2',
+            name: 'Read, Read, Read',
+            url: '1-2-read',
+            isCompleted: true
+        }
+        ]
+    },
+    {
+        id: '2',
+        name: 'Materials Needed',
+        isExpanded: true,
+        isCompleted: true,
+        modules: [
+        {
+            id: '2-1',
+            name: 'For the Test',
+            url: '2-1-materials-for-test',
+            isCompleted: true
+        }, {
+            id: '2-2',
+            name: 'For Preparing',
+            url: '2-2-materials-for-preparing',
+            isCompleted: false
+        }
+        ]
+    }
+];
 
 var app = express();
 
@@ -32,6 +74,7 @@ app.use((req, res) => {
             </Provider>
         );
 
+        store.dispatch(setSteps(steps));
         const initialState = store.getState();
 
         const componentHTML = renderToString(InitialComponent);
