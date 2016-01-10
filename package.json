@@ -6,7 +6,8 @@
   "scripts": {
     "start": "NODE_PATH=$NODE_PATH:./shared node .",
     "dev": "npm run start & webpack-dev-server --progress --colors",
-    "postinstall": "NODE_ENV=production webpack --progress --colors -p --config webpack.prod.config.js"
+    "postinstall": "NODE_ENV=production webpack --progress --colors -p --config webpack.prod.config.js",
+    "build": "NODE_ENV=production webpack --progress --colors -p --config webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
@@ -16,12 +17,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel": "^5.8.23",
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "express": "^4.13.3",
+    "history": "^1.17.0",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
+    "react-router": "^1.0.3",
     "webpack": "^1.12.10"
   },
   "engines": {

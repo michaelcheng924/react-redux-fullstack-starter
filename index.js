@@ -1,11 +1,10 @@
-var express = require('express');
-var path = require('path');
+'use strict';
 
-var app = express();
+require('babel/register')({});
+
+var server = require('./server');
 var PORT = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.listen(PORT, function() {
+server.listen(PORT, function() {
     console.log('Server on port ', PORT);
 });
