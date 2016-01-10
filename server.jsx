@@ -5,6 +5,8 @@ import { renderToString } from 'react-dom/server';
 import { RoutingContext, match } from 'react-router';
 import createLocation from 'history/lib/createLocation';
 import routes from 'routes';
+import { makeStore } from 'helpers';
+import { Provider } from 'react-redux';
 
 var app = express();
 
@@ -12,6 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use((req, res) => {
     const location = createLocation(req.url);
+    const store = makeStore();
 
     match({ routes, location }, (err, redirectLocation, renderProps) => {
         if (err) {
@@ -24,8 +27,12 @@ app.use((req, res) => {
         }
 
         const InitialComponent = (
-            <RoutingContext {...renderProps} />
+            <Provider store={store}>
+                <RoutingContext {...renderProps} />
+            </Provider>
         );
+
+        const initialState = store.getState();
 
         const componentHTML = renderToString(InitialComponent);
 
@@ -35,6 +42,10 @@ app.use((req, res) => {
                 <head>
                     <meta charset="utf-8">
                     <title>Best ACT Prep</title>
+
+                    <script>
+                        window.__INITIAL_STATE__ = ${JSON.stringify(initialState)}
+                    </script>
                 </head>
                 <body>
                     <div id="app">${componentHTML}</div>
