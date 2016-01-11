@@ -1,41 +1,24 @@
 {
-  "name": "bap1",
-  "version": "1.0.0",
-  "description": "Best ACT Prep",
-  "main": "index.js",
-  "scripts": {
-    "start": "NODE_PATH=$NODE_PATH:./shared node .",
-    "dev": "npm run start & webpack-dev-server --progress --colors",
-    "postinstall": "NODE_ENV=production webpack --progress --colors -p --config webpack.prod.config.js",
-    "build": "NODE_ENV=production webpack --progress --colors -p --config webpack.prod.config.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/michaelcheng429/bestactprep"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "babel": "^5.8.23",
-    "babel-loader": "^6.2.1",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-react": "^6.3.13",
-    "express": "^4.13.3",
-    "history": "^1.17.0",
-    "immutable": "^3.7.6",
-    "react": "^0.14.6",
-    "react-dom": "^0.14.6",
-    "react-redux": "^4.0.6",
-    "react-router": "^1.0.3",
-    "redux": "^3.0.5",
-    "webpack": "^1.12.10"
-  },
-  "engines": {
-    "node": "0.12.0"
-  },
   "devDependencies": {
-    "react-hot-loader": "^1.3.0",
-    "webpack-dev-server": "^1.14.0"
+    "eslint-config-xo-space": "^0.7.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-coveralls": "^0.1.0"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": "git@github.com:michaelcheng429/react-redux-fullstack-starter.git",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
   }
 }
