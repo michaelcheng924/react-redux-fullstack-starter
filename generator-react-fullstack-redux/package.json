@@ -5,8 +5,7 @@
   "license": "MIT",
   "repository": "https://github.com/michaelcheng429/react-redux-fullstack-starter.git",
   "files": [
-    "app",
-    "router"
+    "app"
   ],
   "keywords": ["yeoman-generator"],
   "dependencies": {
