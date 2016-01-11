@@ -1,7 +1,11 @@
 var generators = require('yeoman-generator');
+var yosay = require('yosay');
+var chalk = require('chalk');
 
 module.exports = generators.Base.extend({
-    method1: function() {
-        console.log('method 1 just ran');
+    prompting: function() {
+        this.log(yosay(
+            'Welcome to the ' + chalk.green('React Redux Fullstack Starter Kit') + 'generator!'
+        ));
     }
 });
