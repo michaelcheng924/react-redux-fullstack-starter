@@ -34,5 +34,9 @@ module.exports = generators.Base.extend({
             }, this);
             done();
         }.bind(this));
+    },
+
+    install: function() {
+        this.npmInstall();
     }
 });
