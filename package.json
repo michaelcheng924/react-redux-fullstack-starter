@@ -26,6 +26,7 @@
     "css-loader": "^0.23.1",
     "express": "^4.13.3",
     "history": "^1.17.0",
+    "img-loader": "^1.2.2",
     "immutable": "^3.7.6",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
@@ -34,6 +35,7 @@
     "redux": "^3.0.5",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
     "webpack": "^1.12.10"
   },
   "engines": {
