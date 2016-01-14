@@ -28,6 +28,7 @@
     "history": "^1.17.0",
     "img-loader": "^1.2.2",
     "immutable": "^3.7.6",
+    "lodash": "^4.0.0",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "react-redux": "^4.0.6",

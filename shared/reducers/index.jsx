@@ -1,1 +1,1 @@
-export { default as course } from './CourseReducer';
+export { default as products } from './ProductsReducer';
