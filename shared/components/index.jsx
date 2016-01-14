@@ -6,6 +6,7 @@ import routes from 'routes';
 import { makeStore } from 'helpers';
 import { Provider } from 'react-redux';
 import { fromJS } from 'immutable';
+import 'css/master.scss';
 
 const history = createBrowserHistory();
 
