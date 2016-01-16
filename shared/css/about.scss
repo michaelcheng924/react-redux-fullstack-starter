@@ -1,0 +1,13 @@
+.about {
+    background: #FFF;
+    border-radius: 10px;
+    margin: 30px auto;
+    padding: 20px;
+    width: 80%;
+
+    &__heading {
+        display: block;
+        margin-top: 0;
+        text-align: center;
+    }
+}
