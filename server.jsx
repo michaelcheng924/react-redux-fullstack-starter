@@ -1,4 +1,5 @@
 import express from 'express';
+import bodyParser from 'body-parser';
 import path from 'path';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
@@ -8,22 +9,14 @@ import routes from 'routes';
 import serverRoutes from 'server/routes';
 import { makeStore } from 'helpers';
 import { Provider } from 'react-redux';
-import { setItems } from 'actions/ProductsActions';
+import { setItems, setCart } from 'actions/ProductsActions';
 
-const items = [{
-    id: 1,
-    name: 'iPad',
-    price: '289.00',
-    description: 'Lorem ipsum dolor sit amet, vidit insolens ea mei, usu in affert dolorum. Iuvaret inermis voluptatibus sea id. Homero utamur pro ei, no wisi atqui neglegentur est. No tacimates delicata qui.'
-}, {
-    id: 2,
-    name: 'MacBook Pro',
-    price: '1,199.00',
-    description: 'At sed audiam dolores hendrerit. Te vix dissentiunt consectetuer, id ius error invenire efficiantur. Te sit magna ubique probatus. Atqui doming eam ne. Illud voluptua iracundia cum ad, nec eu lorem platonem accommodare.'
-}];
+import items from 'server/fake-database-items.js';
+import cart from 'server/fake-database-cart.js';
 
 var app = express();
 
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 serverRoutes(app);
 
@@ -48,6 +41,7 @@ app.use((req, res) => {
         );
 
         store.dispatch(setItems(items));
+        store.dispatch(setCart(cart));
         const initialState = store.getState();
 
         const componentHTML = renderToString(InitialComponent);

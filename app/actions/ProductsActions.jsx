@@ -5,6 +5,13 @@ export function setItems(items) {
     };
 }
 
+export function setCart(cart) {
+    return {
+        type: 'SET_CART',
+        cart
+    };
+}
+
 export function addToCart(id) {
     return {
         type: 'CART_ADD',
