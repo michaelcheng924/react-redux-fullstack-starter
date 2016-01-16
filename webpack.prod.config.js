@@ -1,13 +1,13 @@
 var path = require('path');
 
 module.exports = {
-    entry: './shared/components',
+    entry: './app/components',
     output: {
         path: path.join(__dirname, 'public'),
         filename: 'bundle.js'
     },
     resolve: {
-        modulesDirectories: ['node_modules', 'shared'],
+        modulesDirectories: ['node_modules', 'app'],
         extensions: ['', '.js', '.jsx', 'scss']
     },
     module: {
@@ -19,6 +19,22 @@ module.exports = {
                 query: {
                     presets: ['react', 'es2015']
                 }
+            },
+            {
+                test: /\.scss$/,
+                loaders: [
+                    'style',
+                    'css',
+                    'autoprefixer?browsers=last 3 versions',
+                    'sass?outputStyle=expanded'
+                ]
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loaders: [
+                    'url?limit=8192',
+                    'img'
+                ]
             }
         ]
     }
