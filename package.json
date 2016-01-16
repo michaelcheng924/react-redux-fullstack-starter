@@ -1,12 +1,14 @@
 {
-  "name": "bap1",
+  "name": "react-redux-fullstack-starter",
   "version": "1.0.0",
-  "description": "Best ACT Prep",
+  "description": "React Redux Fullstack Starter",
   "main": "index.js",
   "scripts": {
     "start": "NODE_PATH=$NODE_PATH:./shared node .",
     "dev": "npm run start & webpack-dev-server --progress --colors",
     "postinstall": "NODE_ENV=production webpack --progress --colors -p --config webpack.prod.config.js",
+    "test": "./node_modules/mocha/bin/mocha --require ./shared/tests/test_starter.js --require ./shared/tests/test_helper.js ./shared --recursive",
+    "test:watch": "npm run test -- --watch",
     "build": "NODE_ENV=production webpack --progress --colors -p --config webpack.prod.config.js"
   },
   "repository": {
@@ -43,6 +45,10 @@
     "node": "0.12.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.4.0",
+    "chai": "^3.4.1",
+    "chai-immutable": "^1.5.3",
+    "mocha": "^2.3.4",
     "react-hot-loader": "^1.3.0",
     "webpack-dev-server": "^1.14.0"
   }

@@ -1,0 +1,78 @@
+.home {
+    &__banner {
+        background: #A7A37E;
+        height: 200px;
+        margin: 30px auto;
+        padding-bottom: 30px;
+        text-align: center;
+        width: 70%;
+    }
+
+    &__logo-image {
+        background: url('../images/panda.png');
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: 85px;
+        margin-right: 10px;
+        position: relative;
+        top: 10px;
+        width: 85px;
+    }
+
+    &__banner-heading {
+        color: #FFF;
+        display: inline-block;
+        font-size: 70px;
+        margin-bottom: 10px;
+    }
+
+    &__tagline {
+        color: #EFECCA;
+        font-size: 30px;
+    }
+}
+
+.products {
+    background: #FFF;
+    border-radius: 5px;
+    margin: 0 auto;
+    opacity: 0.8;
+    padding: 15px 0;
+    text-align: center;
+    width: 50%;
+
+    &__heading {
+        margin: 0;
+    }
+
+    &__items {
+        display: flex;
+        padding-left: 15px;
+    }
+
+    &__item {
+        margin-right: 15px;
+    }
+
+    &__item-price {
+        font-style: italic;
+        margin: 8px 0;
+    }
+
+    &__item-button {
+        background: #046380;
+        border: 0;
+        color: #FFF;
+        cursor: pointer;
+        margin: 0 0 5px;
+        padding: 5px;
+    }
+}
+
+.cart__count {
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 10px;
+    width: 250px;
+}

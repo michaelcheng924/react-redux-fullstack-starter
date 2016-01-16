@@ -1,0 +1,16 @@
+.main-nav {
+    background: #002F2F;
+    height: 40px;
+    width: 100%;
+
+    &__menu-container {
+        float: right;
+    }
+
+    &__link {
+        color: #FFF;
+        display: inline-block;
+        padding: 10px 15px;
+        text-decoration: none;
+    }
+}

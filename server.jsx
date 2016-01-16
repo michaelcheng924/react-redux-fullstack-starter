@@ -7,9 +7,9 @@ import createLocation from 'history/lib/createLocation';
 import routes from 'routes';
 import { makeStore } from 'helpers';
 import { Provider } from 'react-redux';
-import { setProducts } from 'actions/ProductsActions';
+import { setItems } from 'actions/ProductsActions';
 
-const products = [{
+const items = [{
     id: 1,
     name: 'iPad',
     price: '289.00',
@@ -45,7 +45,7 @@ app.use((req, res) => {
             </Provider>
         );
 
-        store.dispatch(setProducts(products));
+        store.dispatch(setItems(items));
         const initialState = store.getState();
 
         const componentHTML = renderToString(InitialComponent);
@@ -55,7 +55,7 @@ app.use((req, res) => {
             <html>
                 <head>
                     <meta charset="utf-8">
-                    <title>Best ACT Prep</title>
+                    <title>React Redux Fullstack Starter</title>
 
                     <script>
                         window.__INITIAL_STATE__ = ${JSON.stringify(initialState)}
