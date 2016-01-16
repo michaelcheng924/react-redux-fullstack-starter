@@ -5,6 +5,7 @@ import { renderToString } from 'react-dom/server';
 import { RoutingContext, match } from 'react-router';
 import createLocation from 'history/lib/createLocation';
 import routes from 'routes';
+import serverRoutes from 'server/routes';
 import { makeStore } from 'helpers';
 import { Provider } from 'react-redux';
 import { setItems } from 'actions/ProductsActions';
@@ -24,6 +25,7 @@ const items = [{
 var app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
+serverRoutes(app);
 
 app.use((req, res) => {
     const location = createLocation(req.url);
