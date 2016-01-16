@@ -1,9 +1,9 @@
 {
   "name": "generator-react-redux-fullstack",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Starter Kit for React + Redux + Node/Express + Webpack + SASS + Babel/ES6",
   "license": "MIT",
-  "repository": "https://github.com/michaelcheng429/react-redux-fullstack-starter.git",
+  "repository": "https://github.com/michaelcheng429/react-redux-fullstack-starter/tree/yeoman-generator",
   "files": [
     "app"
   ],
