@@ -72,3 +72,10 @@ Why use this starter/stack?
     <li><strong>Comments and examples to help you learn and get started</strong> - There is some complexity to this stack. That's why there is so much information here about how to use this stack and this starter.</li>
     <li><strong>Easy deployment to Heroku</strong> - Everything is set up for you to easily deploy your app to Heroku (or another place of your choice).</li>
 </ul>
+
+<h2>Todos</h2>
+<ul>
+<li>Migrate to webpack v2</li>
+    <li>Hook up to real database (mongoose?)</li>
+    <li>Use ExtractTextPlugin to create a separate CSS file</li>
+</ul>
