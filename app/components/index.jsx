@@ -18,7 +18,7 @@ Object.keys(initialState)
         initialState[key] = fromJS(initialState[key]);
     });
 
-const store = makeStore(initialState);
+const store = makeStore(initialState, true);
 
 render(
     <Provider store={store}>

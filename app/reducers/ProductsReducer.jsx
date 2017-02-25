@@ -1,5 +1,11 @@
 import { Map, List, fromJS } from 'immutable';
 import $ from 'jquery';
+import {
+    SET_ITEMS,
+    SET_CART,
+    ADD_TO_CART,
+    REMOVE_FROM_CART,
+} from 'actions/ProductsActionTypes';
 
 const defaultState = Map({
     items: List(),
@@ -8,13 +14,13 @@ const defaultState = Map({
 
 export default function productReducer(state = defaultState, action) {
     switch(action.type) {
-        case 'SET_ITEMS':
+        case SET_ITEMS:
             return state.set('items', fromJS(action.items));
-        case 'SET_CART':
+        case SET_CART:
             return state.set('cart', fromJS(action.cart));
-        case 'CART_ADD':
+        case ADD_TO_CART:
             return addToCart(state, action); 
-        case 'CART_REMOVE':
+        case REMOVE_FROM_CART:
             return removeFromCart(state, action);
         default:
             return state;
