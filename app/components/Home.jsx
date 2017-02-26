@@ -1,10 +1,10 @@
+import React, { createClass } from 'react';
 import _ from 'lodash';
-import React from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { addToCart, removeFromCart } from 'actions/ProductsActions';
 
-export class Home extends React.Component {
+const Home = createClass({
     renderProducts() {
         return _.map(this.props.items, product => {
             const isInCart = _.indexOf(this.props.cart, product.id) !== -1;
@@ -23,15 +23,15 @@ export class Home extends React.Component {
                 </div>
             );
         });
-    }
+    },
 
     render() {
         return (
             <div>
                 <div className="home__banner">
                     <div className="home__logo-image" />
-                    <h1 className="home__banner-heading">Awesome Company</h1>
-                    <div className="home__tagline">Awesome tagline</div>
+                    <h1 className="home__banner-heading">Company Name</h1>
+                    <div className="home__tagline">Tagline</div>
                 </div>
                 <div className="products">
                     <div className="cart__count">Number of items in cart: <strong>{this.props.cart.length}</strong></div>
@@ -42,7 +42,7 @@ export class Home extends React.Component {
                 </div>
             </div>
         );
-    }
+    },
 
     onCartChange(isInCart, id) {
         const dispatch = this.props.dispatch;
@@ -54,7 +54,7 @@ export class Home extends React.Component {
 
         dispatch(addToCart(id));
     }
-}
+});
 
 function mapStateToProps(state) {
     return {

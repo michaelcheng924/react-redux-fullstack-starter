@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { createClass } from 'react';
 import { Link } from 'react-router';
 
-export default class AppView extends React.Component {
+const App = createClass({
     render() {
         return (
             <div>
                 <nav className="main-nav">
-                    <Link className="main-nav__link" to="/">Awesome Company</Link>
+                    <Link className="main-nav__link" to="/">Company Name</Link>
                     <div className="main-nav__menu-container">
                         <Link className="main-nav__link" to="/">Home</Link>
-                        <Link className="main-nav__link" to="about">About</Link>
+                        <Link className="main-nav__link" to="about">About (Routing Example)</Link>
                     </div>
                 </nav>
                 {this.props.children}
             </div>
         );
     }
-}
+});
+
+export default App;
