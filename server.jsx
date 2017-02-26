@@ -53,6 +53,7 @@ app.use((req, res) => {
                     <meta charset="utf-8">
                     <title>React Redux Fullstack Starter</title>
 
+                    <link rel="stylesheet" href="/styles.css">
                     <script>
                         window.__INITIAL_STATE__ = ${JSON.stringify(initialState)}
                     </script>
