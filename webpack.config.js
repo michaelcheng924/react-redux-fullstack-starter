@@ -6,37 +6,43 @@ module.exports = {
     entry: [
         'webpack-dev-server/client?http://127.0.0.1:8080/',
         'webpack/hot/only-dev-server',
-        './app/components'
+        './app/components/index.jsx'
     ],
     output: {
         path: path.join(__dirname, 'public'),
         filename: 'bundle.js'
     },
     resolve: {
-        modulesDirectories: ['node_modules', 'app'],
-        extensions: ['', '.js', '.jsx', '.scss']
+        modules: [
+            'app',
+            'node_modules'
+        ],
+        extensions: ['.js', '.jsx', '.scss']
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loaders: ['react-hot', 'babel?presets[]=react,presets[]=es2015']
+                use: [
+                    'react-hot-loader',
+                    'babel-loader?presets[]=react,presets[]=es2015'
+                ]
             },
             {
                 test: /\.scss$/,
-                loaders: [
-                    'style',
-                    'css',
-                    'autoprefixer?browsers=last 3 versions',
-                    'sass?outputStyle=expanded'
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'autoprefixer-loader?browsers=last 3 versions',
+                    'sass-loader?outputStyle=expanded'
                 ]
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
-                loaders: [
-                    'url?limit=8192',
-                    'img'
+                use: [
+                    'url-loader?limit=8192',
+                    'img-loader'
                 ]
             }
         ]

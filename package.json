@@ -43,7 +43,7 @@
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.10"
+    "webpack": "^2.2.1"
   },
   "engines": {
     "node": "0.12.0"
