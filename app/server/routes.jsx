@@ -1,5 +1,5 @@
-import productRoutes from 'server/products';
+import users from 'server/routes/users';
 
 export default function routes(app) {
-    app.use('/products', productRoutes);
+    app.use('/api/users', users);
 }

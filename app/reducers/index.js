@@ -1,1 +1,1 @@
-export { default as products } from './ProductsReducer';
+export { default as users } from './UsersReducer';
