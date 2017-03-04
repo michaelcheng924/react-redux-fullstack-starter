@@ -2,6 +2,8 @@ import React, { createClass } from 'react';
 import { Link } from 'react-router';
 
 const About = createClass({
+    displayName: 'About',
+
     render() {
         return (
             <div className="about">

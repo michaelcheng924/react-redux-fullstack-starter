@@ -32,47 +32,21 @@
     }
 }
 
-.products {
-    background: #FFF;
-    border-radius: 5px;
+.users {
     margin: 0 auto;
-    opacity: 0.8;
-    padding: 15px 0;
-    text-align: center;
-    width: 50%;
+    width: 600px;
 
-    &__heading {
-        margin: 0;
+    &__form {
+        text-align: center;
     }
 
-    &__items {
-        display: flex;
-        padding-left: 15px;
+    &__table {
+        margin: 0 auto;
     }
 
-    &__item {
-        margin-right: 15px;
+    &__row {
+        &--active {
+            color: blue;
+        }
     }
-
-    &__item-price {
-        font-style: italic;
-        margin: 8px 0;
-    }
-
-    &__item-button {
-        background: #046380;
-        border: 0;
-        color: #FFF;
-        cursor: pointer;
-        margin: 0 0 5px;
-        padding: 5px;
-    }
-}
-
-.cart__count {
-    border: 1px solid #333;
-    border-radius: 5px;
-    margin: 20px auto;
-    padding: 10px;
-    width: 250px;
 }

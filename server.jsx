@@ -9,7 +9,6 @@ import routes from 'routes';
 import serverRoutes from 'server/routes';
 import { makeStore } from 'helpers';
 import { Provider } from 'react-redux';
-import { setItems, setCart } from 'actions/ProductsActions';
 
 import items from 'server/fake-database-items.js';
 import cart from 'server/fake-database-cart.js';
@@ -40,8 +39,6 @@ app.use((req, res) => {
             </Provider>
         );
 
-        store.dispatch(setItems(items));
-        store.dispatch(setCart(cart));
         const initialState = store.getState();
 
         const componentHTML = renderToString(InitialComponent);

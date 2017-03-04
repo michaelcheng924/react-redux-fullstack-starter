@@ -1,4 +1,5 @@
-import { createStore, combineReducers } from 'redux';
+import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
+import thunk from 'redux-thunk';
 import * as reducers from 'reducers';
 
 export function makeStore(state, isClient) {
@@ -7,7 +8,14 @@ export function makeStore(state, isClient) {
         ? createStore(
             reducer,
             state,
-            window && window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+            compose(
+                applyMiddleware(thunk),
+                window && window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+            )
         )
-        : createStore(reducer, state);
+        : createStore(
+            reducer,
+            state,
+            applyMiddleware(thunk)
+        );
 }
