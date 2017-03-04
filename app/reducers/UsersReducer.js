@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import { CHANGE_SELECTED_USER } from 'actions/UsersActionTypes';
 import { addUser, getUsers, removeUser } from 'api/users';
 

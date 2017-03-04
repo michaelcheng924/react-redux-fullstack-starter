@@ -17,7 +17,7 @@ export function createClient({ actionTypePrefix, requestType, url }) {
                         payload: response
                     });
                 }
-            })
+            });
         }
     };
 }
