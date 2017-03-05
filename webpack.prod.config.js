@@ -20,7 +20,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     'react-hot-loader',
-                    'babel-loader?presets[]=react,presets[]=es2015'
+                    'babel-loader?presets[]=react,presets[]=es2015,presets[]=stage-2'
                 ]
             },
             {
