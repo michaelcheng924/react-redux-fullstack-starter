@@ -1,3 +1,4 @@
+import mongoose from 'mongoose';
 import express from 'express';
 import bodyParser from 'body-parser';
 import path from 'path';
@@ -10,8 +11,7 @@ import serverRoutes from 'server/routes';
 import { makeStore } from 'helpers';
 import { Provider } from 'react-redux';
 
-import items from 'server/fake-database-items.js';
-import cart from 'server/fake-database-cart.js';
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/appname');
 
 var app = express();
 

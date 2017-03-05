@@ -1,6 +1,4 @@
-import fs from 'fs';
 import express from 'express';
-import db from 'server/db';
 import { sendUsers } from 'server/routes/users/utils';
 import { User } from 'server/db/user-schema';
 

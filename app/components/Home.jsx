@@ -1,4 +1,4 @@
-import React, { createClass, PropTypes } from 'react';
+import React, { createClass } from 'react';
 import Users from 'components/users';
 
 const Home = createClass({
