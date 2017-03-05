@@ -11,7 +11,7 @@ import serverRoutes from 'server/routes';
 import { makeStore } from 'helpers';
 import { Provider } from 'react-redux';
 
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/appname');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/appname');
 
 var app = express();
 
