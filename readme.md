@@ -20,6 +20,7 @@ There are two ways to download the source code. Both ways will give you the same
 <code>git clone git@github.com:michaelcheng429/react-redux-fullstack-starter.git</code>
 
 <h5>Second way: Yeoman Generator</h5>
+Note: Some people have been having trouble with this. I'll try to fix it sometime.
 <ol>
     <li><code>npm install -g yo</code></li>
     <li><code>npm install -g generator-react-redux-fullstack</code></li>
@@ -31,20 +32,27 @@ There are two ways to download the source code. Both ways will give you the same
 <br /><br />
 Using the yeoman generator should install the dependencies automatically.
 
-<h4>Step 3: Start the webpack-dev-server to view the app and start developing</h4>
+<h4>Step 3: Start the MongoDB daemon</h4>
+This will involve installing MongoDB and then running <code>mongod</code> from the terminal.
+
+<h4>Step 4: Start the webpack-dev-server to view the app and start developing</h4>
 <code>npm run dev</code>
 <br /><br />
 Then, go to <code>localhost:8080</code> in your browser and start developing with live reload/react hot loading!
 
-<h4>Step 4: Deploy to Heroku</h4>
+<h4>Step 5: Deploy to Heroku</h4>
 To easily deploy to Heroku, just follow these simple steps:
 
 <ol>
     <li>Download the Heroku toolbelt and create a Heroku account</li>
     <li>Log in with <code>heroku login</code></li>
     <li><code>git init</code></li>
-    <li><code>heroku create (APPNAME)</code></li>
-    <li><code>git push heroku master</code></li>
+    <li>Create App: <code>heroku create (APPNAME)</code></li>
+    <li>Set up MongoDB<code>heroku addons:create mongolab</code><br>
+    <code>heroku config:get MONGODB_URI</code><br>
+    <code>heroku config:set MONGODB_URI=VALUE_FROM_LAST_STEP(COPY HERE)</code></li>
+    <li>Build the files: <code>npm run build</code></li>
+    <li>Push to Heroku<code>git push heroku master</code></li>
     <li>Go to <code>APPNAME.herokuapp.com</code></li>
 </ol>
 
@@ -55,11 +63,12 @@ This starter includes the following (among other smaller dependencies):
     <li><strong>React</strong> - Great framework for building scalable, performant web apps</li>
     <li><strong>react-router</strong> - Routing library for React</li>
     <li><strong>Redux</strong> - Great philosophy for managing data, data flow, and state with a single state tree</li>
-    <li><strong>Immutable</strong> - Prevents mutation of state. Always return brand new states when state updates.</li>
+    <li><strong>Redux-Thunk</strong> - Used for asynchronous actions in Redux</li>
     <li><strong>Webpack</strong> - Amazing module bundler that basically replaces Grunt and Gulp</li>
     <li><strong>webpack-dev-server + react-hot-loader</strong> - Makes development a joy with easy testing and live reload</li>
     <li><strong>Node + Express</strong> - Asynchronous JavaScript back-end. Node is fast, and Express makes writing Node easier and more fun.</li>
-    <li><strong>Mocha + Chai (testing)</strong> - Great testing framework and assertion library</li>
+    <li><strong>MongoDB</strong> - Easy to use database for Node</li>
+    <li><strong>Mocha + Chai (testing)</strong> - Great testing framework and assertion library (Not up to date)</li>
 </ul>
 
 <h2 id="features">Features</h2>
@@ -71,11 +80,4 @@ Why use this starter/stack?
     <li><strong>Save hours of setting up the stack above to work together</strong> - One of the primary obstacles to using this great stack is how long it takes to get set up. Get all of the basics of this stack, without a ton of fancy junk you don't want.</li>
     <li><strong>Comments and examples to help you learn and get started</strong> - There is some complexity to this stack. That's why there is so much information here about how to use this stack and this starter.</li>
     <li><strong>Easy deployment to Heroku</strong> - Everything is set up for you to easily deploy your app to Heroku (or another place of your choice).</li>
-</ul>
-
-<h2>Todos</h2>
-<ul>
-<li>Migrate to webpack v2</li>
-    <li>Hook up to real database (mongoose?)</li>
-    <li>Use ExtractTextPlugin to create a separate CSS file</li>
 </ul>
