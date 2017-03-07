@@ -1,4 +1,5 @@
 import React, { createClass, PropTypes } from 'react';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 
@@ -64,7 +65,7 @@ const mapStateToProps = createSelector(
 
 const mapActionsToProps = dispatch => ({
     onAddUser: addUser.request(dispatch),
-    onClickUser: changeSelectedUser,
+    onClickUser: bindActionCreators(changeSelectedUser, dispatch),
     onGetUsers: getUsers.request(dispatch),
     onRemoveUser: removeUser.request(dispatch)
 });
