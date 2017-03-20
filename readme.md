@@ -14,31 +14,23 @@ Make sure you have node + npm installed. Preferably, use node v5.4.1, since that
 
 <h4>Step 1: Get the Repository</h4>
 
-There are two ways to download the source code. Both ways will give you the same code.
-
-<h5>First way: Clone the Repository</h5>
 <code>git clone git@github.com:michaelcheng429/react-redux-fullstack-starter.git</code>
-
-<h5>Second way: Yeoman Generator</h5>
-Note: Some people have been having trouble with this. I'll try to fix it sometime.
-<ol>
-    <li><code>npm install -g yo</code></li>
-    <li><code>npm install -g generator-react-redux-fullstack</code></li>
-    <li>In your app's folder: <code>yo react-redux-fullstack</code></li>
-</ol>
 
 <h4>Step 2: Install Dependences</h4>
 <code>npm i</code>
-<br /><br />
-Using the yeoman generator should install the dependencies automatically.
+
+For better debugging, install Redux DevTools for Chrome here:
+https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en
 
 <h4>Step 3: Start the MongoDB daemon</h4>
 This will involve installing MongoDB and then running <code>mongod</code> from the terminal.
 
 <h4>Step 4: Start the webpack-dev-server to view the app and start developing</h4>
 <code>npm run dev</code>
-<br /><br />
+
 Then, go to <code>localhost:8080</code> in your browser and start developing with live reload/react hot loading!
+
+Note: For Windows, you will need to run <code>webpack-dev-server</code> and <code>npm start</code> in separate terminals.
 
 <h4>Step 5: Deploy to Heroku</h4>
 To easily deploy to Heroku, just follow these simple steps:
