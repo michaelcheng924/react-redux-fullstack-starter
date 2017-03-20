@@ -4,7 +4,7 @@
   "description": "React Redux Fullstack Starter",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_PATH=$NODE_PATH:./app node .",
+    "start": "node .",
     "dev": "npm run start & webpack-dev-server --progress --colors",
     "lint": "./node_modules/.bin/eslint",
     "test": "./node_modules/mocha/bin/mocha --require ./app/tests/test_starter.js --require ./app/tests/test_helper.js ./app --recursive",

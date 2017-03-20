@@ -3,13 +3,13 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import path from 'path';
 import React from 'react';
+import { Provider } from 'react-redux';
 import { renderToString } from 'react-dom/server';
 import { RoutingContext, match } from 'react-router';
 import createLocation from 'history/lib/createLocation';
-import routes from 'routes';
-import serverRoutes from 'server/routes';
-import { makeStore } from 'helpers';
-import { Provider } from 'react-redux';
+import routes from './app/routes';
+import serverRoutes from './app/server/routes';
+import { makeStore } from './app/helpers';
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/appname');
 

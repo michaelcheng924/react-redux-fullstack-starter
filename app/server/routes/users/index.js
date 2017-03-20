@@ -1,6 +1,6 @@
 import express from 'express';
-import { sendUsers } from 'server/routes/users/utils';
-import { User } from 'server/db/user-schema';
+import { sendUsers } from './utils';
+import { User } from '../../db/user-schema';
 
 const router = express.Router();
 

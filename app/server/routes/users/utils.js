@@ -1,4 +1,4 @@
-import { User } from 'server/db/user-schema';
+import { User } from '../../db/user-schema';
 
 export function sendUsers(res) {
     User.find((err, results) => {

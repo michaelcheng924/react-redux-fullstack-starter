@@ -1,6 +1,6 @@
 import React, { createClass, PropTypes } from 'react';
 import { isEmpty } from 'lodash';
-import UserRow from 'components/users/Row';
+import UserRow from './Row';
 
 const UsersList = createClass({
     displayName: 'UsersList',
