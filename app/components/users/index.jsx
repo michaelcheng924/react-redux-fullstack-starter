@@ -63,11 +63,11 @@ const mapStateToProps = createSelector(
     (selectedUser, usersList) => ({ selectedUser, usersList })
 );
 
-const mapActionsToProps = dispatch => ({
-    onAddUser: addUser.request(dispatch),
-    onClickUser: bindActionCreators(changeSelectedUser, dispatch),
-    onGetUsers: getUsers.request(dispatch),
-    onRemoveUser: removeUser.request(dispatch)
-});
+const mapActionsToProps = {
+    onAddUser: addUser,
+    onClickUser: changeSelectedUser,
+    onGetUsers: getUsers,
+    onRemoveUser: removeUser
+};
 
 export default connect(mapStateToProps, mapActionsToProps)(Users);
