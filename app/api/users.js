@@ -1,4 +1,4 @@
-import { createClient } from './utils';
+import { createClient } from 'app/api/utils';
 
 export const addUser = createClient({
     actionTypePrefix: 'users:addUser',

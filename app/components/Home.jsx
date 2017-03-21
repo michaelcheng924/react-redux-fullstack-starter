@@ -1,5 +1,5 @@
 import React, { createClass } from 'react';
-import Users from './users';
+import Users from 'app/components/users';
 
 const Home = createClass({
     displayName: 'Home',

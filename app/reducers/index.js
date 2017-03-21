@@ -1,1 +1,1 @@
-export { default as users } from './UsersReducer';
+export { default as users } from 'app/reducers/UsersReducer';

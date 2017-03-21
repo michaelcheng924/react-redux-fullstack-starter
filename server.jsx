@@ -7,9 +7,9 @@ import { Provider } from 'react-redux';
 import { renderToString } from 'react-dom/server';
 import { RoutingContext, match } from 'react-router';
 import createLocation from 'history/lib/createLocation';
-import routes from './app/routes';
-import serverRoutes from './app/server/routes';
-import { makeStore } from './app/helpers';
+import routes from 'app/routes';
+import { makeStore } from 'app/helpers';
+import serverRoutes from 'app/server/routes';
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/appname');
 

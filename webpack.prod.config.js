@@ -8,8 +8,10 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
+        alias: {
+            app: path.resolve(__dirname, 'app')
+        },
         modules: [
-            'app',
             'node_modules'
         ],
         extensions: ['.js', '.jsx', '.scss']
