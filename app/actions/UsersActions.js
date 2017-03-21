@@ -1,4 +1,4 @@
-import { CHANGE_SELECTED_USER } from './UsersActionTypes';
+import { CHANGE_SELECTED_USER } from 'app/actions/UsersActionTypes';
 
 export function changeSelectedUser(email) {
     return {

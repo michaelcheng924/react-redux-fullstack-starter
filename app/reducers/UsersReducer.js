@@ -1,5 +1,5 @@
-import { CHANGE_SELECTED_USER } from '../actions/UsersActionTypes';
-import { addUser, getUsers, removeUser } from '../api/users';
+import { CHANGE_SELECTED_USER } from 'app/actions/UsersActionTypes';
+import { addUser, getUsers, removeUser } from 'app/api/users';
 
 const defaultState = {
     selectedUser: '',

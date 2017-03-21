@@ -3,12 +3,12 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 
-import { selectedUserSelector, usersListSelector } from '../../selectors/users';
-import { changeSelectedUser } from '../../actions/UsersActions';
-import { addUser, getUsers, removeUser } from '../../api/users';
+import { selectedUserSelector, usersListSelector } from 'app/selectors/users';
+import { changeSelectedUser } from 'app/actions/UsersActions';
+import { addUser, getUsers, removeUser } from 'app/api/users';
 
-import UsersAdd from './Add';
-import UsersList from './List';
+import UsersAdd from 'app/components/users/Add';
+import UsersList from 'app/components/users/List';
 
 const Users = createClass({
     displayName: 'Users',

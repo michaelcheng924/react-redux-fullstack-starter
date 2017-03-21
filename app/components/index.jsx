@@ -2,10 +2,10 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router } from 'react-router';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
-import routes from '../routes';
-import { makeStore } from '../helpers';
+import routes from 'app/routes';
+import { makeStore } from 'app/helpers';
 import { Provider } from 'react-redux';
-import '../css/master.scss';
+import 'app/css/master.scss';
 
 const history = createBrowserHistory();
 

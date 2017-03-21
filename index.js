@@ -1,6 +1,7 @@
 'use strict';
 
 require('babel/register')({});
+require('module-alias/register');
 
 var server = require('./server');
 var PORT = process.env.PORT || 3000;
