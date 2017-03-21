@@ -9,15 +9,7 @@ const defaultState = {
 export default function usersReducer(state = defaultState, { type, payload }) {
     switch(type) {
         case addUser.SUCCESS:
-            return {
-                ...state,
-                list: payload.users
-            };
         case getUsers.SUCCESS:
-            return {
-                ...state,
-                list: payload.users
-            };
         case removeUser.SUCCESS:
             return {
                 ...state,
