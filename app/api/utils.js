@@ -3,9 +3,8 @@ import $ from 'jquery';
 export function createClient({ actionTypePrefix, requestType, url }) {
     const SUCCESS = `${actionTypePrefix}_SUCCESS`;
 
-    return {
-        SUCCESS,
-        request: dispatch => data => {
+    function request(data) {
+        function thunk(dispatch) {
             return $.ajax({
                 url,
                 contentType: 'application/json',
@@ -19,5 +18,11 @@ export function createClient({ actionTypePrefix, requestType, url }) {
                 }
             });
         }
-    };
+
+        return thunk;
+    }
+
+    request.SUCCESS = SUCCESS;
+
+    return request;
 }
