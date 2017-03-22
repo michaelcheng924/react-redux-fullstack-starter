@@ -7,7 +7,7 @@
     "start": "node .",
     "dev": "npm run start & webpack-dev-server --progress --colors",
     "lint": "./node_modules/.bin/eslint",
-    "test": "./node_modules/mocha/bin/mocha --require ./app/tests/test_starter.js --require ./app/tests/test_helper.js ./app --recursive",
+    "test": "./node_modules/mocha/bin/mocha --require ./app/tests/test_starter.js ./app/tests --recursive",
     "test:watch": "npm run test -- --watch",
     "build": "NODE_ENV=production webpack --progress --colors -p --config webpack.prod.config.js"
   },
