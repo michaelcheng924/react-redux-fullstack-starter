@@ -19,6 +19,9 @@ Make sure you have node + npm installed. Preferably, use node v5.4.1, since that
 <h4>Step 2: Install Dependences</h4>
 <code>npm i</code>
 
+You may also need to install some packages globally:
+<code>npm i -g nodemon webpack webpack-dev-server</code>
+
 For better debugging, install Redux DevTools for Chrome here:
 https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en
 
@@ -30,7 +33,7 @@ This will involve installing MongoDB and then running <code>mongod</code> from t
 
 Then, go to <code>localhost:8080</code> in your browser and start developing with live reload/react hot loading!
 
-Note: For Windows, you will need to run <code>webpack-dev-server</code> and <code>npm start</code> in separate terminals.
+Note: For Windows, you will need to run <code>webpack-dev-server</code> and <code>nodemon .</code> in separate terminals.
 
 <h4>Step 5: Deploy to Heroku</h4>
 To easily deploy to Heroku, just follow these simple steps:
