@@ -1,5 +1,6 @@
 import React, { createClass } from 'react';
 import Users from 'app/components/users';
+import Requests from 'app/components/requests';
 
 const Home = createClass({
     displayName: 'Home',
@@ -19,6 +20,7 @@ const Home = createClass({
                     selectedUser={selectedUser}
                     usersList={usersList}
                 />
+                <Requests />
             </div>
         );
     }

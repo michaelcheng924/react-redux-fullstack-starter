@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node .",
-    "dev": "nodemon . & webpack-dev-server --progress --colors",
+    "dev": "nodemon . & webpack-dev-server --port 8010 --progress --colors",
     "lint": "./node_modules/.bin/eslint",
     "test": "./node_modules/mocha/bin/mocha --require ./app/tests/test_starter.js ./app/tests --recursive",
     "test:watch": "npm run test -- --watch",

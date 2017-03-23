@@ -1,0 +1,14 @@
+.requests {
+    margin-top: 25px;
+    text-align: center;
+
+    &__error-message {
+        color: red;
+        margin-bottom: 10px;
+    }
+
+    &__row {
+        margin-top: 10px;
+        text-align: center;
+    }
+}
