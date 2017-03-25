@@ -10,7 +10,7 @@
 Here's how you get started:
 
 <h4>Requirements</h4>
-Make sure you have node + npm installed. Preferably, use node v5.4.1, since that is the version used to write this starter.
+Make sure you have node + npm installed. Preferably, use node v6.10.0, since that is the version used to write this starter.
 
 <h4>Step 1: Get the Repository</h4>
 
