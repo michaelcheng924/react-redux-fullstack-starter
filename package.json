@@ -36,6 +36,7 @@
     "img-loader": "^1.2.2",
     "jquery": "^2.2.0",
     "lodash": "^4.0.0",
+    "material-ui": "^0.19.2",
     "module-alias": "^2.0.0",
     "mongoose": "^4.8.5",
     "node-sass": "^3.4.2",
