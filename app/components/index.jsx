@@ -1,20 +1,21 @@
+import { Provider } from 'react-redux';
+import { makeStore } from 'app/helpers';
 import React from 'react';
 import { render } from 'react-dom';
-import { Router } from 'react-router';
-import createBrowserHistory from 'history/lib/createBrowserHistory';
-import routes from 'app/routes';
-import { makeStore } from 'app/helpers';
-import { Provider } from 'react-redux';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+import App from 'app/components/App';
+
 import 'app/css/master.scss';
 
-const history = createBrowserHistory();
+injectTapEventPlugin();
 
-let initialState = window.__INITIAL_STATE__;
+const initialState = window.__INITIAL_STATE__;
 
 const store = makeStore(initialState, true);
 
 render(
     <Provider store={store}>
-        <Router children={routes} history={history} />
+        <App />
     </Provider>,
     document.getElementById('app'));

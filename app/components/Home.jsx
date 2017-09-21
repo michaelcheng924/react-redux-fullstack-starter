@@ -14,11 +14,13 @@ const Home = createClass({
                     <h1 className="home__banner-heading">App Name</h1>
                     <div className="home__tagline">Tagline</div>
                 </div>
-                <Users
-                    onClickUser={onClickUser}
-                    selectedUser={selectedUser}
-                    usersList={usersList}
-                />
+                <div className="home__main-container">
+                    <Users
+                        onClickUser={onClickUser}
+                        selectedUser={selectedUser}
+                        usersList={usersList}
+                    />
+                </div>
             </div>
         );
     }
